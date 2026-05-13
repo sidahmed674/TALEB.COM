@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Assistant — Taleb AI</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='28'%3E✦%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body data-taleb-page="ai">
+  <div class="bg-anim"></div>
+  <div class="bg-grid"></div>
+  <div class="orb o1"></div><div class="orb o2"></div>
+
+  <header class="navbar" id="navbar"></header>
+
+  <div class="container" style="padding-top:20px;">
+    <div class="chat-wrap glass-strong">
+      <div class="chat-head">
+        <div class="ai-avatar">✦</div>
+        <div>
+          <strong>Taleb AI Tutor</strong>
+          <div class="muted" style="font-size:12px;">● Online — Arabic · French · English</div>
+        </div>
+        <div style="margin-left:auto; display:flex; gap:6px;">
+          <button class="icon-btn" id="clear-chat" title="Clear chat">🗑</button>
+        </div>
+      </div>
+
+      <div class="chat-body" id="chat-body">
+        <div class="msg bot">Salam! 👋 I'm Taleb, your AI study partner. I can help with any subject — math, physics, philosophy, Arabic literature and more. Ask me anything!</div>
+      </div>
+
+      <div style="padding: 0 4px 8px;">
+        <div class="suggest-row" id="suggest-row">
+          <button class="suggest-chip" data-prompt="Explain Newton's laws simply">Explain Newton's laws</button>
+          <button class="suggest-chip" data-prompt="Help me solve x² - 5x + 6 = 0">Solve x² - 5x + 6 = 0</button>
+          <button class="suggest-chip" data-prompt="اشرح لي الثورة الجزائرية">اشرح الثورة الجزائرية</button>
+          <button class="suggest-chip" data-prompt="Donne-moi un plan pour réviser le BAC">Plan de révision BAC</button>
+          <button class="suggest-chip" data-prompt="Give me a quiz on biology">Quiz: biology</button>
+        </div>
+        <form class="chat-input" id="chat-form">
+          <input type="text" id="chat-input" placeholder="Ask Taleb anything…" autocomplete="off" />
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/core.js"></script>
+  <script src="/js/ai-chat.js"></script>
+</body>
+</html>

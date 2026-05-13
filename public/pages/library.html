@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PDF Library — Taleb AI</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='28'%3E✦%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body data-taleb-page="library">
+  <div class="bg-anim"></div>
+  <div class="bg-grid"></div>
+  <div class="orb o1"></div><div class="orb o2"></div>
+
+  <header class="navbar" id="navbar"></header>
+
+  <div class="page-header">
+    <div class="container">
+      <span class="eyebrow">PDF Library</span>
+      <h1>📚 Lessons & Resources</h1>
+      <p>Download comprehensive PDFs for every subject — summaries, formula sheets, and full guides.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding-bottom:60px;">
+    <div class="filter-bar">
+      <input type="text" id="lib-search" placeholder="🔍 Search PDFs…" />
+      <select id="lib-subject">
+        <option value="">All categories</option>
+        <option value="math">Mathematics</option>
+        <option value="phys">Physics</option>
+        <option value="philo">Philosophy</option>
+        <option value="arab">Arabic</option>
+      </select>
+    </div>
+    <div class="grid grid-3" id="pdf-grid"></div>
+  </div>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="/js/core.js"></script>
+  <script src="/js/pages.js"></script>
+</body>
+</html>

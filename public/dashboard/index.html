@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Taleb AI</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='28'%3E✦%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body data-taleb-page="dashboard">
+  <div class="bg-anim"></div>
+  <div class="bg-grid"></div>
+  <div class="orb o1"></div><div class="orb o2"></div>
+
+  <header class="navbar" id="navbar"></header>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="main-pane">
+      <div class="panel-head">
+        <div>
+          <h1 id="welcome-line">Welcome back 👋</h1>
+          <p class="muted" style="margin:4px 0 0;">Here's your learning snapshot</p>
+        </div>
+        <a href="/pages/ai-chat.html" class="btn btn-primary btn-sm">✨ Ask Taleb AI</a>
+      </div>
+
+      <!-- KPIs -->
+      <div class="stat-row" id="kpi-row"></div>
+
+      <div class="grid grid-2">
+        <!-- Progress -->
+        <div class="card" style="padding:24px;">
+          <h3 style="margin:0 0 18px;">📊 Subject Progress</h3>
+          <div id="progress-list" style="display:flex; flex-direction:column; gap:16px;"></div>
+        </div>
+
+        <!-- XP & streak -->
+        <div class="card" style="padding:24px;">
+          <h3 style="margin:0 0 18px;">⚡ XP & Achievements</h3>
+          <div id="xp-panel"></div>
+        </div>
+
+        <!-- Saved lessons -->
+        <div class="card" style="padding:24px;">
+          <h3 style="margin:0 0 18px;">💾 Saved Lessons</h3>
+          <div id="saved-lessons"></div>
+        </div>
+
+        <!-- Study planner -->
+        <div class="card" style="padding:24px;">
+          <h3 style="margin:0 0 18px;">📅 Study Planner</h3>
+          <div id="planner"></div>
+        </div>
+
+        <!-- Recent activity -->
+        <div class="card" style="padding:24px;">
+          <h3 style="margin:0 0 18px;">🕒 Recent Activity</h3>
+          <ul id="activity" style="list-style:none; padding:0; margin:0;"></ul>
+        </div>
+
+        <!-- AI recommendations -->
+        <div class="card" style="padding:24px;">
+          <h3 style="margin:0 0 18px;">✨ AI Recommendations</h3>
+          <div id="ai-recs"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/core.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

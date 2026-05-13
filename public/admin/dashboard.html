@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Taleb AI</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='28'%3E✦%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body data-taleb-page="admin">
+  <div class="bg-anim"></div>
+  <div class="bg-grid"></div>
+  <div class="orb o1"></div><div class="orb o2"></div>
+
+  <header class="navbar" id="navbar"></header>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="side-head">
+        <div class="side-avatar">👑</div>
+        <div>
+          <strong>Super Admin</strong>
+          <span id="admin-email">—</span>
+        </div>
+      </div>
+      <ul class="side-menu">
+        <li><a href="#overview" class="active" data-tab="overview"><span class="ico">📊</span> Overview</a></li>
+        <li><a href="#users" data-tab="users"><span class="ico">👥</span> Users</a></li>
+        <li><a href="#lessons" data-tab="lessons"><span class="ico">📚</span> Lessons</a></li>
+        <li><a href="#pdfs" data-tab="pdfs"><span class="ico">📄</span> PDFs</a></li>
+        <li><a href="#exercises" data-tab="exercises"><span class="ico">📝</span> Exercises</a></li>
+        <li><a href="#community" data-tab="community"><span class="ico">💬</span> Community</a></li>
+        <li><a href="#notifications" data-tab="notifications"><span class="ico">🔔</span> Notifications</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-pane">
+      <!-- Overview -->
+      <section data-panel="overview">
+        <div class="panel-head">
+          <div>
+            <h1>Admin Overview</h1>
+            <p class="muted" style="margin:4px 0 0;">Welcome back, super admin 👑</p>
+          </div>
+        </div>
+        <div class="stat-row" id="admin-kpis"></div>
+        <div class="grid grid-2">
+          <div class="card" style="padding:24px;">
+            <h3 style="margin:0 0 14px;">📈 Activity (last 7 days)</h3>
+            <div id="activity-chart" style="display:flex; align-items:flex-end; gap:8px; height:180px; padding:10px 0;"></div>
+          </div>
+          <div class="card" style="padding:24px;">
+            <h3 style="margin:0 0 14px;">🔔 Recent Notifications</h3>
+            <ul id="admin-notifs" style="list-style:none; padding:0; margin:0;"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Users -->
+      <section data-panel="users" class="hidden">
+        <div class="panel-head">
+          <h1>User Management</h1>
+          <button class="btn btn-primary btn-sm" id="add-user-btn">+ Add User</button>
+        </div>
+        <div class="table-wrap glass">
+          <table>
+            <thead>
+              <tr><th>Name</th><th>Email</th><th>Role</th><th>XP</th><th>Joined</th><th>Actions</th></tr>
+            </thead>
+            <tbody id="users-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Lessons -->
+      <section data-panel="lessons" class="hidden">
+        <div class="panel-head">
+          <h1>Lessons</h1>
+          <button class="btn btn-primary btn-sm" id="add-lesson-btn">+ Add Lesson</button>
+        </div>
+        <div class="grid grid-3" id="admin-lessons"></div>
+      </section>
+
+      <!-- PDFs -->
+      <section data-panel="pdfs" class="hidden">
+        <div class="panel-head">
+          <h1>PDF Library</h1>
+          <button class="btn btn-primary btn-sm" id="add-pdf-btn">+ Upload PDF</button>
+        </div>
+        <div class="table-wrap glass">
+          <table>
+            <thead><tr><th>Title</th><th>Subject</th><th>Pages</th><th>Size</th><th>Downloads</th><th>Actions</th></tr></thead>
+            <tbody id="pdfs-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Exercises -->
+      <section data-panel="exercises" class="hidden">
+        <div class="panel-head">
+          <h1>Exercises</h1>
+          <button class="btn btn-primary btn-sm" id="add-ex-btn">+ Add Exercise</button>
+        </div>
+        <div class="table-wrap glass">
+          <table>
+            <thead><tr><th>Title</th><th>Subject</th><th>Difficulty</th><th>Tags</th><th>Actions</th></tr></thead>
+            <tbody id="ex-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Community -->
+      <section data-panel="community" class="hidden">
+        <div class="panel-head"><h1>Community Moderation</h1></div>
+        <div id="admin-posts"></div>
+      </section>
+
+      <!-- Notifications -->
+      <section data-panel="notifications" class="hidden">
+        <div class="panel-head">
+          <h1>Send Notification</h1>
+        </div>
+        <div class="card" style="padding:24px; max-width:600px;">
+          <div class="field">
+            <label>Title</label>
+            <input type="text" id="notif-title" placeholder="New feature available!" />
+          </div>
+          <div class="field">
+            <label>Message</label>
+            <textarea id="notif-msg" rows="3" placeholder="Tell students something important…"></textarea>
+          </div>
+          <button class="btn btn-primary" id="send-notif-btn">📣 Broadcast to all users</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal host -->
+  <div id="modal-host"></div>
+
+  <script src="/js/core.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

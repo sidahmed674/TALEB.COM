@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taleb AI — Futuristic learning for Algerian students</title>
+  <meta name="description" content="Taleb AI is a futuristic AI-powered educational platform for Algerian students — BAC, BEM, and university." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='28'%3E✦%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body data-taleb-page="home">
+
+  <!-- Animated background -->
+  <div class="bg-anim"></div>
+  <div class="bg-grid"></div>
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="orb o3"></div>
+
+  <!-- Navbar (injected by core.js) -->
+  <header class="navbar" id="navbar"></header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge reveal"><span class="dot"></span> <span data-i18n="hero.badge">Built for Algerian students</span></div>
+        <h1 class="reveal">
+          <span data-i18n="hero.title1">Learn smarter with</span><br/>
+          <span class="grad" data-i18n="hero.title2">Taleb AI</span>
+        </h1>
+        <p class="lead reveal" data-i18n="hero.lead">Your futuristic AI companion for BAC, BEM, and university.</p>
+        <div class="hero-cta reveal">
+          <a href="/auth/register.html" class="btn btn-primary">🚀 <span data-i18n="hero.cta1">Start learning free</span></a>
+          <a href="/pages/ai-chat.html" class="btn btn-ghost">✨ <span data-i18n="hero.cta2">Meet the AI tutor</span></a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat"><strong>48K+</strong><span data-i18n="hero.stat1">Active students</span></div>
+          <div class="stat"><strong>1.2K</strong><span data-i18n="hero.stat2">Lessons & PDFs</span></div>
+          <div class="stat"><strong>35K</strong><span data-i18n="hero.stat3">Exercises solved</span></div>
+          <div class="stat"><strong>4.9★</strong><span data-i18n="hero.stat4">Avg. rating</span></div>
+        </div>
+      </div>
+
+      <!-- AI preview -->
+      <div class="ai-preview reveal">
+        <div class="ai-preview-head">
+          <div class="ai-avatar">✦</div>
+          <div>
+            <h4>Taleb AI Tutor</h4>
+            <p>● Online — Arabic · French · English</p>
+          </div>
+        </div>
+        <div class="ai-chat" id="ai-demo">
+          <div class="msg user">كيف نحل المعادلة من الدرجة الثانية؟</div>
+          <div class="msg bot">Great question! Use the discriminant Δ = b² - 4ac. If Δ ≥ 0, the roots are x = (-b ± √Δ) / 2a. Want me to walk through an example?</div>
+          <div class="msg user">Oui, donne-moi un exemple 📚</div>
+          <div class="typing"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search -->
+    <div class="container">
+      <div class="search-wrap reveal">
+        <input type="text" data-i18n-ph="common.search" placeholder="Search lessons, topics, teachers…" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Lessons -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Lessons</span>
+        <h2 data-i18n="home.featuredTitle">Featured lessons</h2>
+        <p data-i18n="home.featuredSub">Hand-picked courses from top Algerian teachers</p>
+      </div>
+      <div class="grid grid-3" id="lessons-grid"></div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Impact</span>
+        <h2 data-i18n="home.statsTitle">Numbers that inspire us</h2>
+        <p data-i18n="home.statsSub">Trusted by students across 58 wilayas</p>
+      </div>
+      <div class="stats-wrap">
+        <div class="stat-card glass reveal"><div class="num" data-count="48200">0</div><div class="label">Students</div></div>
+        <div class="stat-card glass reveal"><div class="num" data-count="1240">0</div><div class="label">Lessons</div></div>
+        <div class="stat-card glass reveal"><div class="num" data-count="58">0</div><div class="label">Wilayas</div></div>
+        <div class="stat-card glass reveal"><div class="num" data-count="98">0</div><div class="label">% Pass rate</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Testimonials</span>
+        <h2 data-i18n="home.testiTitle">Students love Taleb AI</h2>
+        <p data-i18n="home.testiSub">Real feedback from real learners</p>
+      </div>
+      <div class="grid grid-3" id="testi-grid"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2 data-i18n="home.ctaTitle">Ready to ace your exams?</h2>
+        <p data-i18n="home.ctaSub">Join thousands of Algerian students already learning smarter.</p>
+        <a href="/auth/register.html" class="btn btn-ghost" data-i18n="home.ctaBtn">Create free account</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="/js/core.js"></script>
+  <script src="/js/index.js"></script>
+</body>
+</html>
